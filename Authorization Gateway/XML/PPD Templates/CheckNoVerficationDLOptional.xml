@@ -12,7 +12,7 @@
 				<ACCOUNT_TYPE>YourAccountType</ACCOUNT_TYPE>
 			</ACCOUNT>
 			<CONSUMER>
-				<FIRST_NAME>YourFirstName</FIRST_NAME>
+				<FIRST_NAME>String</FIRST_NAME>
 				<LAST_NAME>YourLastName</LAST_NAME>
 				<ADDRESS1>YourAddressLine1</ADDRESS1>
 				<ADDRESS2>YourAddressLine2</ADDRESS2>
