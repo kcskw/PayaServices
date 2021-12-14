@@ -5,7 +5,7 @@
       <TERMINAL_ID>YourCertificatonTerminalID</TERMINAL_ID>
     </MERCHANT>
 		<PACKET>
-			<IDENTIFIER>YourIdentifier</IDENTIFIER>
+			<IDENTIFIER>#######</IDENTIFIER>
 			<ACCOUNT>
 				<ROUTING_NUMBER>YourRoutingNumber</ROUTING_NUMBER>
 				<ACCOUNT_NUMBER>YourAccountNumber</ACCOUNT_NUMBER>
