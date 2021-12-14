@@ -21,20 +21,20 @@ The individual phases are outlined below and include a table that defines the mi
 
 Preparation Phase Milestones:
 
--Obtain a User Name and Password for Certification:  
+- Obtain a User Name and Password for Certification:  
 This user name and password will be unique to your team and will only allow you to invoke web methods used for certification. These will be separate from the production credentials you will receive once your certification is complete. 
 
--Determine your SEC Code(s):  The SEC Codes are defined later in this document and are the main factor in determining what XML Template and Schema to use.
+- Determine your SEC Code(s):  The SEC Codes are defined later in this document and are the main factor in determining what XML Template and Schema to use.
 
--Determine your XML Template(s):  Once you have determined your SEC Code you can determine which XML Template to use.  The “How to determine which XML Template to Use” section of this document explains the purpose of the XML templates and will assist you in determining which Template(s) to use.
+- Determine your XML Template(s):  Once you have determined your SEC Code you can determine which XML Template to use.  The “**How to determine which XML Template to Use**” section of this document explains the purpose of the XML templates and will assist you in determining which Template(s) to use.
 
--Determine your XML Schema(s): Once you have determined your SEC Code you can also determine which XSD will be used to validate your data packet submission.  The “How to determine which XSD to Use” section of this document explains the purpose of the XSDs and will assist you in determining which XSD(s) to use.
+- Determine your XML Schema(s): Once you have determined your SEC Code you can also determine which XSD will be used to validate your data packet submission.  The “How to determine which XSD to Use” section of this document explains the purpose of the XSDs and will assist you in determining which XSD(s) to use.
 
--Determine your Certification Terminal IDs: Once you have determined your XSD(s), you can easily find the corresponding Certification Terminal ID listed in the same row as the XSD URL. 
+- Determine your Certification Terminal IDs: Once you have determined your XSD(s), you can easily find the corresponding Certification Terminal ID listed in the same row as the XSD URL. 
 
--Establish Connectivity: Create a web reference to the URL defined in the “Connection Method” section. This URL is only good for testing and certification.  A production URL will be provided during the final phase of the integration effort.
+- Establish Connectivity: Create a web reference to the URL defined in the “Connection Method” section. This URL is only good for testing and certification.  A production URL will be provided during the final phase of the integration effort.
 
--Request Certification Terminal Settings: Successfully invoke the GetCertificationTerminalSettings web method for each Certification Terminal ID previously identified.
+- Request Certification Terminal Settings: Successfully invoke the GetCertificationTerminalSettings web method for each Certification Terminal ID previously identified.
 
 ## Phase 2: Development
 During this phase the integration team will be responsible for ensuring the host application can properly handle Authorizations, Declines, Voids, Reversals and in some cases Credits, Represented Checks and Manager Overrides. 
@@ -44,27 +44,27 @@ The section below entitled “Beginning Authorization Gateway Development” det
 
 Development Phase Milestones
 
--Validation Handling: Successfully validate a request Data Packet against your published XSD(s) and have the host system be able to handle failed validation messages.
+- Validation Handling: Successfully validate a request Data Packet against your published XSD(s) and have the host system be able to handle failed validation messages.
 Process Single Certification Check:
 Authorization: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate an Authorization response.
 
--Check Limit Exceeded: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Check Limit Exceed response.
+- Check Limit Exceeded: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Check Limit Exceed response.
 
--Decline: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Decline response.
+- Decline: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Decline response.
 
--Void: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Void response for a previously authorized check.
+- Void: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Void response for a previously authorized check.
 
--Reversal: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Reversal response.
+- Reversal: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Reversal response.
 
--Credit: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate an Authorization response.  
+- Credit: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate an Authorization response.  
 
--Manager Needed: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Manager Needed response, and successfully perform an override.
+- Manager Needed: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Manager Needed response, and successfully perform an override.
 
--Represented Check: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Represented Check Response, and successfully perform an override.
+- Represented Check: Successfully invoke the ProcessSingleCertificationCheck web method and send a data packet with the necessary information to generate a Represented Check Response, and successfully perform an override.
 
--Exception Handling: Include exception handling in the host system.
+- Exception Handling: Include exception handling in the host system.
 
--Request a Certification Script: Upon successful completion of the above milestones you can request a certification script.  
+- Request a Certification Script: Upon successful completion of the above milestones you can request a certification script.  
 
 
 ## Phase 3: Certification
@@ -72,11 +72,11 @@ During this phase the integration team will be responsible for sequentially comp
 
 
 Certification Phase Milestones:
--Request Certification Script:  Request a certification script from the Integration department.
+- Request Certification Script:  Request a certification script from the Integration department.
 
--Complete the Certification Script:  Successfully complete each objective defined in the certification script.
+- Complete the Certification Script:  Successfully complete each objective defined in the certification script.
 
-You can reach our team by email at integration@eftsupport.com.
+_You can reach our team by email at integration@eftsupport.com._
 
 
 ## Phase 4:  Production
@@ -85,13 +85,14 @@ The Production Phase is the final phase of the integration effort.  During this 
 
 Production Phase Milestones:
 
--Request a User Name and Password for Production:  Obtain a new unique user name and password that is authorized to invoke the production web methods.
+- Request a User Name and Password for Production:  Obtain a new unique user name and password that is authorized to invoke the production web methods.
 
--Request the Production URL: Obtain the URL that will be used to reference the production web methods. 
+- Request the Production URL: Obtain the URL that will be used to reference the production web methods. 
 
--Request a Production Terminal ID: Obtain a Terminal ID for use in production. These will be given out upon Merchant Approval.
+- Request a Production Terminal ID: Obtain a Terminal ID for use in production. These will be given out upon Merchant Approval.
 
--Redirect the Host Application: Redirect the host application to use the production URL and web methods with the provided production User Name, Password, and Terminal ID.
+- Redirect the Host Application: Redirect the host application to use the production URL and web methods with the provided production User Name, Password, and Terminal ID.
 
--Request a “Go Live” Date: This will be sent with the Production Credentials and will be the date that the credentials are active.
+- Request a “Go Live” Date: This will be sent with the Production Credentials and will be the date that the credentials are active.
 
+Please Navagate to the Process portion :tada:
