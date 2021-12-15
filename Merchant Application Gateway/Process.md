@@ -30,8 +30,9 @@ The Application Gateway has been designed for fast and easy integration with you
 
 ## **SOAP Header**
 
-|     UserName    |     String    |     Username   provided by Paya Services for authorization.    |
+|                 |               |                                                                |
 |-----------------|---------------|----------------------------------------------------------------|
+|     UserName    |     String    |     Username   provided by Paya Services for authorization.    |
 |     Password    |     String    |     Password   provided by Paya Services for authorization.    |
 
 (Please Holder Example) 
@@ -53,20 +54,80 @@ _NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
 - [**BoardCertificationLocation_ACH**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationLocation_ACH)
   - **Description**:  This method will process an ACH location application and return a detail success or failure response.  This method is used during interface testing and certification.  
   - **Input**:  
-   - Paya Services Merchant ID as Integer
-   - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+    - Paya Services Merchant ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
   - **Output**:  Outputs an XML string.
 
 - [**BoardCertificationTerminal_ACH**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationTerminal_ACH)
   - **Description**:  This method will process an ACH terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response.  This method is used during interface testing and certification.
   - **Input**:  
-   - Paya Services Location ID as Integer
-   - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
   - **Output**:  Outputs an XML string.
 
 - [**CreateCertificationTerminal_ACH**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=CreateCertificationTerminal_ACH)
   - **Description**:  This method will process an ACH terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program. This method is used during interface testing and certification.
   - **Input**:  
-   - Paya Services Location ID as Integer
-   - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+## **Check21 Certification Methods**
+
+- [**BoardCertificationMerchant_Check21**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationMerchant_Check21)
+  - **Description**:  This method will process a Check21 merchant application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**:  Accepts an XML string called a data packet that much conform to the application schema.  
+  - **Output**:  Outputs an XML string.
+
+- [**BoardCertificationLocation_Check21**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationLocation_Check21)
+
+  - **Description**:  This method will process a Check21 location application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**:  
+    - Paya Services Merchant ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+- [**BoardCertificationTerminal_Check21**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationTerminal_Check21)
+
+  - **Description**:  This method will process a Check21 terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response.  This method is used during interface testing and certification.
+  - **Input**:  
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+- [**CreateCertificationTerminal_Check21**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=CreateCertificationTerminal_Check21)
+
+  - **Description**:  This method will process a Check21 terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program. This method is used during interface testing and certification.
+  - **Input**:  
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+## **Gift Certification Methods**
+
+- [**BoardCertificationMerchant_Gift**]()
+- 
+  - **Description**:  This method will process a Gift merchant application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**:  Accepts an XML string called a data packet that much conform to the application schema.  
+  - **Output**:  Outputs an XML string.
+
+- [**BoardCertificationLocation_Gift**]()
+  - **Description**:  This method will process a Gift location application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**:  
+    - Paya Services Merchant ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+- [**BoardCertificationTerminal_Gift**]()
+  - **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response.  This method is used during interface testing and certification.
+  - **Input**:  
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+- [**CreateCertificationTerminal_Gift**]()
+  - **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program.  This method is used during interface testing and certification.
+  - **Input**:  
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
   - **Output**:  Outputs an XML string.
