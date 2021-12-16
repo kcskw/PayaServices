@@ -149,9 +149,12 @@ integration@eftsupport.com
 
 
 **Code Sample Kits**
+
 Java, VB.Net and PHP Sample Kits are available via FTP.
 
 FTP: 		ftp.eftchecks.com
+
 UserID:     	SampleKits
+
 Password:   	60cJSK13%0ymgzab
 
