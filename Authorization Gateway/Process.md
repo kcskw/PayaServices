@@ -44,13 +44,14 @@ https://demo.eftchecks.com/webservices/schemas/ppd/examples/CheckVerificationIde
 
 ***Note about Special Characters**
 Because the Data packet is XML, some special characters must be escaped to be included in the data. Please see the examples below.
-|     Special Character    |     Symbol    |     Escaped Form    |
-|--------------------------|---------------|---------------------|
-|     Ampersand            |     &         |     &amp;           |
-|     Less-than            |     <         |     &lt;            |
-|     Greater-than         |     >         |     &gt;            |
-|     Quotes               |     “         |     &quot;          |
-|     Apostrophe           |     ‘         |     &apos;          |
+
+|     Special Character    |     Symbol    |     Escaped Form     |
+|--------------------------|---------------|----------------------|
+|     Ampersand            |     &         |     \&amp;           |
+|     Less-than            |     <         |     \&lt;            |
+|     Greater-than         |     >         |     \&gt;            |
+|     Quotes               |     “         |     \&quot;          |
+|     Apostrophe           |     ‘         |     \&apos;          |
 
 # **Phase 2 Development**
 
