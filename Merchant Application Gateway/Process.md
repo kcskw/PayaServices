@@ -112,21 +112,24 @@ _NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
   - **Output**:  Outputs an XML string.
 
 - [**BoardCertificationLocation_Gift**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationLocation_Gift)
-  - **Description**:  This method will process a Gift location application and return a detail success or failure response.  This method is used during interface testing and certification.  
+
+- **Description**:  This method will process a Gift location application and return a detail success or failure response.  This method is used during interface testing and certification.  
   - **Input**:  
     - Paya Services Merchant ID as Integer
     - Accepts an XML string called a data packet that must conform to the new terminal application schema.
   - **Output**:  Outputs an XML string.
 
 - [**BoardCertificationTerminal_Gift**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=BoardCertificationTerminal_GIFT)
-  - **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response.  This method is used during interface testing and certification.
+
+- **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response.  This method is used during interface testing and certification.
   - **Input**:  
     - Paya Services Location ID as Integer
     - Accepts an XML string called a data packet that must conform to the new terminal application schema.
   - **Output**:  Outputs an XML string.
 
 - [**CreateCertificationTerminal_Gift**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=CreateCertificationTerminal_GIFT)
-  - **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program.  This method is used during interface testing and certification.
+
+- **Description**:  This method will process a Gift terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program.  This method is used during interface testing and certification.
   - **Input**:  
     - Paya Services Location ID as Integer
     - Accepts an XML string called a data packet that must conform to the new terminal application schema.
@@ -134,80 +137,89 @@ _NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
 
 ## **Other Certification Methods**
 
-- [**UploadCertificationSupportingDocs**]()
-  - **Description**:  This method will upload a PDF as a byte array of the signed merchant application as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  
+- [**UploadCertificationSupportingDocs**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=UploadCertificationSupportingDocs)
+
+- **Description**:  This method will upload a PDF as a byte array of the signed merchant application as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  
   - **Input**:  
     - Paya Services Merchant ID as Integer
     - Accepts a PDF document as a byte array 
   - **Output**:  none
 
-- [**UploadCertificationSupportingDocs2**]()
-  - **Description**:  This method will upload a file as a byte array of the signed merchant application as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  Supported file extensions include DOC, DOCX, XLS, XLSX, TIFF, JPEG, PSD, AI, EPS, PDF, PNG, JPG, GIF, & BMP
+- [**UploadCertificationSupportingDocs2**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=UploadCertificationSupportingDocs2)
+
+- **Description**:  This method will upload a file as a byte array of the signed merchant application as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  Supported file extensions include DOC, DOCX, XLS, XLSX, TIFF, JPEG, PSD, AI, EPS, PDF, PNG, JPG, GIF, & BMP
   - **Input**:  
     - Paya Services Merchant ID as Integer
     - Accepts a document as a byte array
     - File Extension as String 
   - **Output**:  none
 
-- [**RetrieveCertificationMerchantStatus**]()
-  - **Description**:  This method will process a merchant id and return a detailed merchant status.  This method is used during interface testing and certification.
+- [**RetrieveCertificationMerchantStatus**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=RetrieveCertificationMerchantStatus)
+
+- **Description**:  This method will process a merchant id and return a detailed merchant status.  This method is used during interface testing and certification.
   - **Input**:  Paya Services Merchant ID as Integer
   - **Output**:  Outputs an XML string.
 
-- [**RequestCertificationCheckLimitIncrease**]()
-  - **Description**:  This method will request a check limit increase for a specified terminal id.  This method is used during interface testing and certification.
+- [**RequestCertificationCheckLimitIncrease**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=RequestCertificationCheckLimitIncrease)
+
+- **Description**:  This method will request a check limit increase for a specified terminal id.  This method is used during interface testing and certification.
   - **Input**:
     - Paya Services Terminal ID as Integer
     - Requested check limit as a Decimal
   - **Output**:  Outputs an XML string.
   - **Usage**: After request, use [RetrieveCertificationMerchantStatus](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=RetrieveCertificationMerchantStatus) to see if the check limit increase was approved and to retrieve your new MID number to input into the physical terminal.
 
-RequestCertificationBankAccountChange
-Description:  This method will request a bank account change for a location id.  This method is used during interface testing and certification.
-Input:
-	Paya Services Location ID as Integer
-	New Routing Number as a string
-	New Account Number as a string
-Output:  Outputs an XML string with an Issue Id as Integer.
-Usage:  After request, use UploadCertificationIssueSupportingDocs to upload signed merchant bank change request as PDF.
+- [**RequestCertificationBankAccountChange**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=RequestCertificationBankAccountChange)
 
-UploadCertificationIssueSupportingDocs
-Description:  This method will upload a PDF as a byte array of the signed merchant bank change request as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  
-Input:  
-	Paya Services Issue ID as Integer
-	Accepts a PDF document as a byte array 
-Output:  none
+- **Description**:  This method will request a bank account change for a location id.  This method is used during interface testing and certification.
+  - **Input**:
+    - Paya Services Location ID as Integer
+    - New Routing Number as a string
+    - New Account Number as a string
+  - **Output**:  Outputs an XML string with an Issue Id as Integer.
+  - **Usage**:  After request, use [UploadCertificationIssueSupportingDocs](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=UploadCertificationIssueSupportingDocs) to upload signed merchant bank change request as PDF.
 
-UploadCertificationIssueSupportingDocs2
-Description:  This method will upload a file as a byte array of the signed merchant bank change request as well as other supporting documents that need to be attached.  This method is used during interface testing and certification. 
+- [**UploadCertificationIssueSupportingDocs**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=UploadCertificationIssueSupportingDocs)
+
+- **Description:  This method will upload a PDF as a byte array of the signed merchant bank change request as well as other supporting documents that need to be attached.  This method is used during interface testing and certification.  
+  - **Input**:  
+    - Paya Services Issue ID as Integer
+    - Accepts a PDF document as a byte array 
+  - **Output**:  none
+
+- [**UploadCertificationIssueSupportingDocs2**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=UploadCertificationIssueSupportingDocs2)
+
+- **Description**:  This method will upload a file as a byte array of the signed merchant bank change request as well as other supporting documents that need to be attached.  This method is used during interface testing and certification. 
 Supported file extensions include DOC, DOCX, XLS, XLSX, TIFF, JPEG, PSD, AI, EPS, PDF, PNG, JPG, GIF, & BMP
-Input:  
-	Paya Services Issue ID as Integer
-	Accepts a document as a byte array 
-	File Extension as String 
-Output:  none
+  - **Input**:  
+    - Paya Services Issue ID as Integer
+    - Accepts a document as a byte array 
+    - File Extension as String 
+  - **Output**:  none
 
-RequestCertificationMerchantCancellation
-Description:  This method will request a merchant cancellation.  This method is used during interface testing and certification.
-Input:
-	Paya Services Merchant ID as Integer
-	Requested cancellation reason as CancellationReason Enum
-Output:  Outputs an XML string with an Issue Id as Integer.
+- [**RequestCertificationMerchantCancellation**](https://demo.eftchecks.com/webservices/AppGateway.asmx?op=RequestCertificationMerchantCancellation)
 
-BoardCertificationMerchants
-Description:  This method will process an ACH and Check21 merchant application and return a detail success or failure response.  This method is used during interface testing and certification.  
-Input: Accepts an XML string called a data packet that much conform to the application schema.  
-Output:  Outputs an XML string.
+- **Description**:  This method will request a merchant cancellation.  This method is used during interface testing and certification.
+  - **Input**:
+    - Paya Services Merchant ID as Integer
+    - Requested cancellation reason as CancellationReason Enum
+  - **Output**:  Outputs an XML string with an Issue Id as Integer.
 
-BoardCertificationLocations
-Description:  This method will process an ACH and Check21 location application and return a detail success or failure response.  This method is used during interface testing and certification.  
-Input:  
-	Paya Services Merchant ID as Integer
-	Accepts an XML string called a data packet that must conform to the new terminal application schema.
-Output:  Outputs an XML string.
-CreateCertificationTerminals
-Description:  This method will process an ACH and Check21 terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program. This method is used during interface testing and certification.
-Input:  
-	Paya Services Location ID as Integer
-	Accepts an XML string called a data packet that must conform to the new terminal application schema.
-Output:  Outputs an XML string.
+- [**BoardCertificationMerchants
+  - **Description**:  This method will process an ACH and Check21 merchant application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**: Accepts an XML string called a data packet that much conform to the application schema.  
+  - **Output**:  Outputs an XML string.
+
+- [**BoardCertificationLocations
+  - **Description**:  This method will process an ACH and Check21 location application and return a detail success or failure response.  This method is used during interface testing and certification.  
+  - **Input**:  
+    - Paya Services Merchant ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
+
+- [**CreateCertificationTerminals
+  - **Description**:  This method will process an ACH and Check21 terminal application to add a terminal to an EXISTING merchant location and return a detail success or failure response. It does not require a terminal to clone. The method also allows a terminal to be boarded for a new Program. This method is used during interface testing and certification.
+  - **Input**:  
+    - Paya Services Location ID as Integer
+    - Accepts an XML string called a data packet that must conform to the new terminal application schema.
+  - **Output**:  Outputs an XML string.
