@@ -1,6 +1,6 @@
 | Template                                             | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
 |------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
-| [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckNoVerficationDLOptional.xml)                    |               |                |             | 1010 / 2010                            |
+| [CheckNoVerificationDLOptional.xml](CheckNoVerficationDLOptional.xml)                    |               |                |             | 1010 / 2010                            |
 | CheckNoVerificationDLRequired.xml                    | X             |                |             | 1011 / 2011                            |
 | CheckVerificationIdentityVerificationDLOptional.xml  |               | X              | X           | 1012 / 2012                            |
 | CheckVerificationIdentityVerificationDLRequired.xml  | X             | X              | X           | 1013 / 2013                            |
