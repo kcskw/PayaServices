@@ -1,7 +1,7 @@
 | Template                                             | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
 |------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
 | [CheckNoVerificationDLOptional.xml](CheckNoVerficationDLOptional.xml)                    |               |                |             | 1010 / 2010                            |
-| CheckNoVerificationDLRequired.xml                    | X             |                |             | 1011 / 2011                            |
+| [CheckNoVerificationDLRequired.xml](CheckNoVerificationDLRequired.xml)                    | X             |                |             | 1011 / 2011                            |
 | CheckVerificationIdentityVerificationDLOptional.xml  |               | X              | X           | 1012 / 2012                            |
 | CheckVerificationIdentityVerificationDLRequired.xml  | X             | X              | X           | 1013 / 2013                            |
 | CheckVerificationOnlyDLOptional.xml                  |               | X              |             | 1014 / 2014                            |
