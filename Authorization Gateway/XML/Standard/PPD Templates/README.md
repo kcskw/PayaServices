@@ -2,9 +2,9 @@
 |------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
 | [CheckNoVerificationDLOptional.xml](CheckNoVerficationDLOptional.xml)                    |               |                |             | 1010 / 2010                            |
 | [CheckNoVerificationDLRequired.xml](CheckNoVerificationDLRequired.xml)                    | X             |                |             | 1011 / 2011                            |
-| CheckVerificationIdentityVerificationDLOptional.xml  |               | X              | X           | 1012 / 2012                            |
-| CheckVerificationIdentityVerificationDLRequired.xml  | X             | X              | X           | 1013 / 2013                            |
-| CheckVerificationOnlyDLOptional.xml                  |               | X              |             | 1014 / 2014                            |
-| CheckVerificationOnlyDLRequired.xml                  | X             | X              |             | 1015 / 2015                            |
-| IdentityVerificationOnlyDLOptional.xml               |               |                | X           | 1016 / 2016                            |
-| IdentityVerificationOnlyDLRequired.xml               | X             |                | X           | 1017 / 2017                            |
+| [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)  |               | X              | X           | 1012 / 2012                            |
+| [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)  | X             | X              | X           | 1013 / 2013                            |
+| [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationOnlyDLOptional.xml)                  |               | X              |             | 1014 / 2014                            |
+| [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationOnlyDLRequired.xml)                  | X             | X              |             | 1015 / 2015                            |
+| [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/IdentityVerificationOnlyDLOptional.xml)               |               |                | X           | 1016 / 2016                            |
+| [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/IdentityVerificationOnlyDLRequired.xml)               | X             |                | X           | 1017 / 2017                            |
