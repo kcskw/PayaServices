@@ -1,4 +1,4 @@
-| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
 |---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
 | [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 2310                            |
 | [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 2311                            |
