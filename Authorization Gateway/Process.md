@@ -483,88 +483,98 @@ This XML data packet example contains all available elements. The elements and d
 ### **Standard XML Templates**
 A matrix of the available XML Templates for each SEC code can be found below. The grid contains the name of the XML Template, based on the XML Templates determining criteria, and a link to the actual XML Template. 
 
-PPD XML Templates	
+### **PPD XML Templates**
+
 (Root path:  https://demo.eftchecks.com/webservices/schemas/ppd/templates)
-|     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
-|------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     [CheckNoVerificationDLOptional.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckNoVerificationDLOptional.xml)                      |                        |                         |                      |     1010 / 2010                                   |
-|     [CheckNoVerificationDLRequired.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckNoVerificationDLRequired.xml)                      |     X                  |                         |                      |     1011 / 2011                                   |
-|     [CheckVerificationIdentityVerificationDLOptional.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1012 / 2012                                   |
-|     [CheckVerificationIdentityVerificationDLRequired.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     1013 / 2013                                   |
-|     [CheckVerificationOnlyDLOptional.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1014 / 2014                                   |
-|     [CheckVerificationOnlyDLRequired.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1015 / 2015                                   |
-|     [IdentityVerificationOnlyDLOptional.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1016 / 2016                                   |
-|     [IdentityVerificationOnlyDLRequired.xml](https://demo.eftchecks.com/webservices/schemas/ppd/templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1017 / 2017                                   |
+
+| Template                                             | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
+|------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLOptional.xml](CheckNoVerficationDLOptional.xml)                    |               |                |             | 1010 / 2010                            |
+| [CheckNoVerificationDLRequired.xml](CheckNoVerificationDLRequired.xml)                    | X             |                |             | 1011 / 2011                            |
+| [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)  |               | X              | X           | 1012 / 2012                            |
+| [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)  | X             | X              | X           | 1013 / 2013                            |
+| [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationOnlyDLOptional.xml)                  |               | X              |             | 1014 / 2014                            |
+| [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/CheckVerificationOnlyDLRequired.xml)                  | X             | X              |             | 1015 / 2015                            |
+| [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/IdentityVerificationOnlyDLOptional.xml)               |               |                | X           | 1016 / 2016                            |
+| [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/PPD%20Templates/IdentityVerificationOnlyDLRequired.xml)               | X             |                | X           | 1017 / 2017                            |
 
 ### **CCD XML Templates**
+
 (Root path:  https://demo.eftchecks.com/webservices/schemas/ccd//templates)
 
 |     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
 |------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     CheckNoVerificationDLOptional.xml                      |                        |                         |                      |     1710 / 2710                                   |
-|     CheckNoVerificationDLRequired.xml                      |     X                  |                         |                      |     1711 / 2711                                   |
-|     CheckVerificationIdentityVerificationDLOptional.xml    |                        |     X                   |     X                |     1712 / 2712                                   |
-|     CheckVerificationIdentityVerificationDLRequired.xml    |     X                  |     X                   |     X                |     1713 / 2713                                   |
-|     CheckVerificationOnlyDLOptional.xml                    |                        |     X                   |                      |     1714 / 2714                                   |
-|     CheckVerificationOnlyDLRequired.xml                    |     X                  |     X                   |                      |     1715 / 2715                                   |
-|     IdentityVerificationOnlyDLOptional.xml                 |                        |                         |     X                |     1716 / 2716                                   |
-|     IdentityVerificationOnlyDLRequired.xml                 |     X                  |                         |     X                |     1717 / 2717                                   |
+|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     1710 / 2710                                   |
+|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     1711 / 2711                                   |
+|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1712 / 2712                                   |
+|     [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     1713 / 2713                                   |
+|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1714 / 2714                                   |
+|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1715 / 2715                                   |
+|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1716 / 2716                                   |
+|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/CCD%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1717 / 2717                                   |
+
 
 ### **WEB XML Templates**
+
 (Root path:  https://demo.eftchecks.com/webservices/schemas/web/templates)
 
 |     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
 |------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLOptional.xml                      |                        |                         |                      |     2310                           |
-|     CheckNoVerificationDLRequired.xml                      |     X                  |                         |                      |     2311                           |
-|     CheckVerificationIdentityVerificationDLOptional.xml    |                        |     X                   |     X                |     2312                           |
-|     CheckVerificationIdentityVerificationDLRequired.xml    |     X                  |     X                   |     X                |     2313                           |
-|     CheckVerificationOnlyDLOptional.xml                    |                        |     X                   |                      |     2314                           |
-|     CheckVerificationOnlyDLRequired.xml                    |     X                  |     X                   |                      |     2315                           |
-|     IdentityVerificationOnlyDLOptional.xml                 |                        |                         |     X                |     2316                           |
-|     IdentityVerificationOnlyDLRequired.xml                 |     X                  |                         |     X                |     2317                           |
+|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     2310                           |
+|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     2311                           |
+|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     2312                           |
+|     [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     2313                           |
+|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     2314                           |
+|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     2315                           |
+|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     2316                           |
+|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/WEB%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     2317                           |
+
 
 ### **TEL XML Templates**	
+
 (Root path:  https://demo.eftchecks.com/webservices/schemas/tel/templates)
 
 |     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
 |------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     CheckNoVerificationDLOptional.xml                      |                        |                         |                      |     1210 / 2210                                   |
-|     CheckNoVerificationDLRequired.xml                      |     X                  |                         |                      |     1211 / 2211                                   |
-|     CheckVerificationIdentityVerificationDLOptional.xml    |                        |     X                   |     X                |     1212 / 2212                                   |
-|     CheckVerificationIdentityVerificationDLRequired.xml    |     X                  |     X                   |     X                |     1213 / 2213                                   |
-|     CheckVerificationOnlyDLOptional.xml                    |                        |     X                   |                      |     1214 / 2214                                   |
-|     CheckVerificationOnlyDLRequired.xml                    |     X                  |     X                   |                      |     1215 / 2215                                   |
-|     IdentityVerificationOnlyDLOptional.xml                 |                        |                         |     X                |     1216 / 2216                                   |
-|     IdentityVerificationOnlyDLRequired.xml                 |     X                  |                         |     X                |     1217 / 2217                                   |
+|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     1210 / 2210                                   |
+|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     1211 / 2211                                   |
+|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1212 / 2212                                   |
+|     [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     1213 / 2213                                   |
+|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1214 / 2214                                   |
+|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1215 / 2215                                   |
+|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1216 / 2216                                   |
+|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1217 / 2217                                   |
+
 
 ### **POP XML Templates	**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/pop/templates)
 
 |     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
 |------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLOptional.xml                      |                        |                         |                      |     1110                           |
-|     CheckNoVerificationDLRequired.xml                      |     X                  |                         |                      |     1111                           |
-|     CheckVerificationIdentityVerificationDLOptional.xml    |                        |     X                   |     X                |     1112                           |
-|     CheckVerificationIdentityVerificationDLRequired.xml    |     X                  |     X                   |     X                |     1113                           |
-|     CheckVerificationOnlyDLOptional.xml                    |                        |     X                   |                      |     1114                           |
-|     CheckVerificationOnlyDLRequired.xml                    |     X                  |     X                   |                      |     1115                           |
-|     IdentityVerificationOnlyDLOptional.xml                 |                        |                         |     X                |     1116                           |
-|     IdentityVerificationOnlyDLRequired.xml                 |     X                  |                         |     X                |     1117                           |
+|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     1110                           |
+|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     1111                           |
+|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1112                           |
+|     [CheckVerificationIdentityVerificationDLRequired.xm](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)l    |     X                  |     X                   |     X                |     1113                           |
+|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1114                           |
+|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1115                           |
+|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1116                           |
+|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/POP%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1117                           |
+
 
 ### **Check21 XML Templates**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/c21/templates)
 
 |     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
 |------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLOptional.xml                      |                        |                         |                      |     1610                           |
-|     CheckNoVerificationDLRequired.xml                      |     X                  |                         |                      |     1611                           |
-|     CheckVerificationIdentityVerificationDLOptional.xml    |                        |     X                   |     X                |     1612                           |
-|     CheckVerificationIdentityVerificationDLRequired.xml    |     X                  |     X                   |     X                |     1613                           |
-|     CheckVerificationOnlyDLOptional.xml                    |                        |     X                   |                      |     1614                           |
-|     CheckVerificationOnlyDLRequired.xml                    |     X                  |     X                   |                      |     1615                           |
-|     IdentityVerificationOnlyDLOptional.xml                 |                        |                         |     X                |     1616                           |
-|     IdentityVerificationOnlyDLRequired.xml                 |     X                  |                         |     X                |     1617                           |
+|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     1610                           |
+|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     1611                           |
+|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1612                           |
+|     [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     1613                           |
+|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1614                           |
+|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1615                           |
+|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1616                           |
+|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1617                           |
+
 
 ## **XML Templates using Tokens**
 
