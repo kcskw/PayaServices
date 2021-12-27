@@ -12,7 +12,7 @@
 				<ACCOUNT_TYPE>YourAccountType</ACCOUNT_TYPE>
 			</ACCOUNT>
 			<CONSUMER>
-				<FIRST_NAME>YouFirstName</FIRST_NAME>
+				<FIRST_NAME>YourFirstName</FIRST_NAME>
 				<LAST_NAME>YourLastName</LAST_NAME>
 				<ADDRESS1>YourAddressLine1</ADDRESS1>
 				<ADDRESS2>YourAddressLine2</ADDRESS2>
@@ -23,10 +23,6 @@
 				<DL_STATE>YourDriveLicenseState</DL_STATE>
 				<DL_NUMBER>YourDriverLicenseNumber</DL_NUMBER>
 				<COURTESY_CARD_ID>YourCourtesyCardID</COURTESY_CARD_ID>
-				<IDENTITY>
-					<SSN4>YourSSN</SSN>
-					<DOB_YEAR>YourDOBYear</DOB_YEAR>
-				</IDENTITY>
 			</CONSUMER>
 			<CHECK>
 				<CHECK_AMOUNT>YourCheckAmount</CHECK_AMOUNT>
