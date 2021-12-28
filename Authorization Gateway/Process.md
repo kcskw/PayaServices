@@ -26,7 +26,7 @@ The Authorization Gateway uses the Standard Entry Class (SEC) codes to determine
 •	**C21** - Check 21 :  Although not an SEC Code C21 is used to denote Check 21 transactions. Check 21 requires a check reading device capture the routing number, account number, and check number from the source document (Check) as well as capture images of both the front and back of the source document.  
 
 
-How to determine which XML Template to Use
+## **How to determine which XML Template to Use**
 The XML data packet can be built from scratch or one of the available XML templates can be used to build the XML data packet prior to submitting to the Authorization Gateway. The URI for the XML data packet for a given terminal can be retrieved from the Terminal Settings but can also be determined by using the criteria below.
 
 The root path for all XML Templates is https://demo.eftchecks.com/webserivces/schemas/  followed by the SEC Code, “/Templates/”, and the XML Template name.  The XML Template is determined by the following criteria:
@@ -52,6 +52,8 @@ Because the Data packet is XML, some special characters must be escaped to be in
 |     Greater-than         |     >         |     \&gt;            |
 |     Quotes               |     “         |     \&quot;          |
 |     Apostrophe           |     ‘         |     \&apos;          |
+
+Link to [XML Examples](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML)
 
 # **Phase 2 Development**
 
