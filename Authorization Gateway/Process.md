@@ -4,7 +4,7 @@
 
 Once you have successfully connected to the Authorization Gateway and are comfortable with adding the SOAP header, you will test your request and response with the GetCertificationTerminalSettings.
  
-The GetCertificationTerminalSettings web method is defined in the Terminal Settings – XML Specification(#Terminal Settings – XML Specification) section, providing an example of the request and response. The invocation of this web method is part of the Preparation Phase because it is the simplest web method and requires no input parameters.
+The GetCertificationTerminalSettings web method is defined in the [Terminal Settings – XML Specification](#Terminal Settings – XML Specification) section, providing an example of the request and response. The invocation of this web method is part of the Preparation Phase because it is the simplest web method and requires no input parameters.
 
 This web method can be invoked if your implementation team determines the host system needs to acquire information about the Authorization Gateway Terminal, and does not need to be invoked on a continuous basis.
 
