@@ -80,11 +80,11 @@ The specification for the Authorization Gateway XML Data Packet allows you to op
 These identifiers are not inherently unique, rather the Authorization Gateway leaves the responsibility of determining if an identifier is unique to the host system. It is not required that optional identifiers are unique, but it is strongly recommended. If an identifier is not unique it may become difficult for your host system to match responses or retrieve archived responses.  In the examples we have provided, GUIDs have been used as optional identifiers. The use of GUIDs ensures uniqueness, but any value can be used as an identifier, including database identity column values. It is also important to note that if the implementation team determines an identifier needs to be unique, that it only needs to be unique for a specific terminal ID, but it can be unique across all terminal IDs for a given user. 
  
 
-### The REQUEST_ID attribute should be a unique identifier that is used to identify the overall data packet. When your data packet is received by the Authorization Gateway it is processed, and asynchronously stored along with the response. This is done so the host system can invoke the GetArchivedResponse web method to request a previous response. 
+**The REQUEST_ID** attribute should be a unique identifier that is used to identify the overall data packet. When your data packet is received by the Authorization Gateway it is processed, and asynchronously stored along with the response. This is done so the host system can invoke the GetArchivedResponse web method to request a previous response. 
 
 The GetArchivedResponse web method accepts the REQUEST_ID as an input parameter and will return the corresponding response.  It is important to note that the GetArchivedResponse is a production only web method and can only be effectively used if the host system keeps track of and submits values in the REQUEST_ID attribute.  The value in the REQUEST_ID attribute of the request data packet is also returned in the response data packet in the REQUEST_ID attribute of the RESPONSE element.
 
-### The TRANSACTION_ID element should be a unique identifier that is used to identify a specific transaction.  The value contained in the TRANSACTION_ID element is recorded by the Authorization Gateway but is not used internally and cannot be used to request a specific transaction. The value in the TRANSACTION_ID element is however returned in the response data packet in the TRANSACTION_ID element within the parent AUTHORIZATION_MESSAGE element. This was done so that your host system can match the response for a specific transaction to an internal record in the host system. 
+**The TRANSACTION_ID** element should be a unique identifier that is used to identify a specific transaction.  The value contained in the TRANSACTION_ID element is recorded by the Authorization Gateway but is not used internally and cannot be used to request a specific transaction. The value in the TRANSACTION_ID element is however returned in the response data packet in the TRANSACTION_ID element within the parent AUTHORIZATION_MESSAGE element. This was done so that your host system can match the response for a specific transaction to an internal record in the host system. 
 
 ## **Valid Identifiers**
 Each request XML Data Packet must contain a valid identifier for its schema. The identifier you use will change depending on the context of the transaction being sent. Your integration team will become more familiar with the different identifiers as you begin to work on each milestone. However, a list of all the valid identifiers can be found below.  
@@ -99,7 +99,8 @@ Each request XML Data Packet must contain a valid identifier for its schema. The
 |     Update (U)       |     This   is used in schemas for POP and Check 21 for OCR transactions that already   have complete data in the data packet. It forces the transaction to run as a   normal POP or Check 21 transaction on an OCR terminal. This is normally done   when a change is needed to a transaction that was submitted under a normal   OCR transaction. Example: A transaction is sent through using the OCR engine.   The data that is returned does not match the image. If the transaction was   still successful and a change is warranted, a Void Transaction is sent. Then   another transaction with updated data (from the response and corrected from   user) is sent back through the system with a complete data packet and “U” as   the identifier. If the transaction failed, other actions will need to be taken.    |
 
 ## **Verification Only**
-If the gateway terminal is setup as verification only or the VERIFICATION_ONLY element is set to true, then the transaction will be processed as verification only. This means that an authorization will be run, but that the check will not undergo Electronic Check Conversion (ECC) and will have to be taken to the bank for deposit. Depending on the merchant’s program, the funds may or may not be guaranteed.
+If the gateway terminal is setup as verification only or the VERIFICATION_ONLY element is set to true, then the transaction will be processed as verification only. This means that an authorization will be run, but that the check **_will not_** undergo Electronic Check Conversion (ECC) and will have to be taken to the bank for deposit. 
+Depending on the merchant’s program, the funds may or may not be guaranteed.
 
 ## **Account Section Data**
 All PPD, CCD, TEL and WEB schemas define that the ACCOUNT child elements must contain values.  The child elements within the ACCOUNT element for POP and Check 21 (C21) schemas define what ACCOUNT child elements must contain values and what ACCOUNT child elements can be left empty.  All of the child elements within the ACCOUNT element for POP and Check 21 (C21), except the ACCOUNT_TYPE for POP schemas, define the data as optional. This is because for these SEC codes you can either provide the swiped MICR data or provide the routing, account, and check numbers.   If the MICR_DATA, ROUTING_NUMBER, ACCOUNT_NUMBER, and CHECK_NUMBER are all left empty in the request data packet then the transaction cannot be processed. Either the MICR_DATA or the ROUTING_NUMBER, ACCOUNT_NUMBER, and CHECK_NUMBER elements must contain values. 
@@ -171,17 +172,17 @@ Definition and hyperlink to sample SOAP request and response.
 ## **Certification Web Methods when using Tokens**
 Definition using tokens and hyperlink to samples of SOAP request and response.
 
-- [**GetCertificationTerminalSettings]
+- [**GetCertificationTerminalSettings](https://demo.eftchecks.com/webservices/AuthGateway.asmx?op=GetCertificationTerminalSettings)
   - **Description**: This method will return the Terminal Settings for a certification Terminal. This method is used during interface testing and certification.
   - **Input**:  Accepts no parameters. 
   - **Output**: Outputs an XML string. 
 
-- [**AuthGatewayCertification]
+- [**AuthGatewayCertification](https://demo.eftchecks.com/webservices/AuthGateway.asmx?op=AuthGatewayCertification)
   - **Description**:  This method will validate that the interface is sending a data packet that conforms to its schema and is used during interface testing and certification.
   - **Input**:  Accepts an XML string called a data packet that must conform to the terminals schema provided in the certification Terminal Settings.
   - **Output**: Outputs an XML string.
 
-- [**ProcessSingleCertificationCheckWithToken]
+- [**ProcessSingleCertificationCheckWithToken](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=ProcessSingleCertificationCheckWithToken)
   - **Description**:  This method will run the authorization for a single certification check based on the settings for the provided certification terminal using either, a given Token or the Account Type, Routing Number, and Account Number. A list of the valid certification routing numbers and their purpose is below.  This method is used during interface testing and certification.
 
 |     Routing Number    |     Token                               |     Purpose               |
@@ -196,12 +197,12 @@ Definition using tokens and hyperlink to samples of SOAP request and response.
 
 _NOTE: Using this method by passing the Account Type, Routing Number, and Account Number will create a TOKEN and pass it back in the Authorization Message Response. If a TOKEN already exists for the Account Type, Routing Number, and Account Number, the current TOKEN will be passed back in the Authorization Message Response._
 
-- [**GetCertificationToken**]
+- [**GetCertificationToken**](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=GetCertificationToken)
   - **Description**: This method will return a Token for the Account Type, Routing Number, and Account Number.
   - **Input**:  Accepts an XML string called a data packet that must conform to the schema provided in this [Link](https://demo.eftchecks.com/webservices/Schemas/other/gettoken.xsd).
   - **Output**: Outputs an XML string.
   - 
-- [**ParseCertificationMICR**]
+- [**ParseCertificationMICR**](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=ParseCertificationMICR)
   - **Description**: This method will return an Account Type, Routing Number and Account Number.
   - **Input**:  Accepts an XML string called a data packet that must conform to the schema provided in this [Link](https://demo.eftchecks.com/webservices/Schemas/other/parsemicr.xsd).
   - **Output**: Outputs an XML string.
@@ -209,17 +210,17 @@ _NOTE: Using this method by passing the Account Type, Routing Number, and Accoun
 ## **Production Web Methods** 
 Definition and hyperlink to sample SOAP request and response.
 
-- [**GetTerminalSettings**]
+- [**GetTerminalSettings**](https://demo.eftchecks.com/webservices/AuthGateway.asmx?op=GetTerminalSettings)
   - **Description **: This method will return the Terminal Settings for a terminal.
   - **Input**:  Accepts no parameters.
   - **Output**: Outputs an XML string.
 
-- [**ProcessSingleCheck**]
+- [**ProcessSingleCheck**](https://demo.eftchecks.com/webservices/AuthGateway.asmx?op=ProcessSingleCheck)
   - **Description**:  This method will run the authorization for a single check based on the settings for the terminal.
   - **Input**:  Accepts an XML string called a data packet that must conform to the terminals schema provided in the Terminal Settings.
   - **Output**: Outputs an XML string.
 
-- [**GetArchivedResponse**]
+- [**GetArchivedResponse**](https://demo.eftchecks.com/webservices/AuthGateway.asmx?op=GetArchivedResponse)
   - **Description**:  This method will retrieve a response for a previously processed transaction.
   - **Input**:  Accepts a Request ID string.
   - **Output**: Outputs an XML string.
@@ -227,7 +228,7 @@ Definition and hyperlink to sample SOAP request and response.
 ## **Production Web Methods when using Tokens**
 Definition using tokens and hyperlink to a sample SOAP request and response.
 
-- [**ProcessSingleCheckWithToken**]
+- [**ProcessSingleCheckWithToken**](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=ProcessSingleCheckWithToken)
   - **Description**:  This method will run the authorization for a single check based on the settings for the terminal using either, a given Token or the Account Type, Routing Number, and Account Number.
   - **Input**:  Accepts an XML string called a data packet that must conform to the terminals schema provided in the Terminal Settings.
   - **Output**: Outputs an XML string.
@@ -235,12 +236,12 @@ Definition using tokens and hyperlink to a sample SOAP request and response.
 _NOTE: Using this method by passing the Account Type, Routing Number, and Account Number will create a TOKEN and pass it back in the Authorization Message Response. If a TOKEN already exists for the Account Type, Routing Number, and Account Number, the current TOKEN will be passed back in the Authorization Message Response._
 
 
-- [**GetToken**]
+- [**GetToken**](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=GetToken)
   - **Description**:  This method will return a Token for the Account Type, Routing Number, and Account Number.
   - **Input**:  Accepts an XML string called a data packet that must conform to the schema provided in this [Link](https://demo.eftchecks.com/webservices/Schemas/other/gettoken.xsd).
   - **Output**: Outputs an XML string.
 
-- [**ParseMICR**]
+- [**ParseMICR**](https://demo.eftchecks.com/Webservices/AuthGateway.asmx?op=ParseMICR)
   - **Description**:  This method will return an Account Type, Routing Number and Account Number.
   - **Input**:  Accepts an XML string called a data packet that must conform to the schema provided in this [Link](https://demo.eftchecks.com/webservices/Schemas/other/parsemicr.xsd).
   - **Output**: Outputs an XML string.
@@ -390,6 +391,7 @@ This XML data packet example contains all available elements. The elements and d
 |     MRDCIMGCOUNT:          |     This   is an optional element for transactions that have an SEC code of POP or   Check21. NOTE:  Please view POP or Check21   XSD’s for implementation.                                                                                                                                                                                                                                                                                                                        |
 |     CUSTOM1- CUSTOM4:      |     These   are optional elements that can contain up to 50 alpha numeric   characters.  We will return this in   reporting.                                                                                                                                                                                                                                                                                                                                                       |
 ### **Authorization Gateway XML Data Packet with Token Example**:
+
 This XML data packet example contains all available elements. The elements and data types that are required for a specific terminal are defined in that terminal’s XSD.
 ```
 <?xml version=”1.0” encoding=”utf-8”?>
@@ -629,45 +631,47 @@ A matrix of the available XML Templates when using tokens for each SEC code can 
 
 ### **TEL XML Templates**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/tel/templates)
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 1210 / 2210                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 1211 / 2211                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 1212 / 2212                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 1213 / 2213                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 1214 / 2214                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 1215 / 2215                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 1216 / 2216                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 1217 / 2217                            |
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     1210 / 2210                                   |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     1211 / 2211                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     1212 / 2212                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     1213 / 2213                                   |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     1214 / 2214                                   |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     1215 / 2215                                   |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     1216 / 2216                                   |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     1217 / 2217                                   |
 
 ### **POP XML Templates**	
 (Root path:  https://demo.eftchecks.com/webservices/schemas/pop/templates)
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     1110                           |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     1111                           |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     1112                           |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     1113                           |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     1114                           |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     1115                           |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     1116                           |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     1117                           |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 1110                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 1111                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 1112                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 1113                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 1114                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 1115                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 1116                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 1117                            |
+
 
 ### **Check21 XML Templates**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/c21/templates)
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     1610                           |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     1611                           |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     1612                           |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     1613                           |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     1614                           |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     1615                           |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     1616                           |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     1617                           |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 1610                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 1611                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 1612                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 1613                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 1614                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 1615                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 1616                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 1617                            |
+
 
 ## **OCR XML Templates**
 There are two different ways of processing images, one with OCR and one with Mobile OCR.  Images captured by a Mobile Device are handled differently (due to patent restrictions) than images captured via a desktop scanner, such as an RDM, Panini, Magtek or other peripheral device.  Images submitted via a mobile device must be submitted as a .JPG, while images submitted via a peripheral device must be submitted in a .TIFF format.  
