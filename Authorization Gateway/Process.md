@@ -68,10 +68,10 @@ This leaves you with the following possibilities for creating your XML data pack
 
 We recommend you leverage the published [XSDs](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS) and [XML](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML) templates and use either the first or second options when creating the data packets to be sent. All these methods use the .NET platform however other languages have successfully been used. 
 
-We have provided example request XML Data Packets to assist your integration team with getting started. A link to these examples can be found at the end of the “How to determine which XML Template to Use” section.
+We have provided example request XML Data Packets to assist your integration team with getting started. A link to these examples can be found at the end of the “How to determine which XML Template to Use” section above.
 
 
-Once you have determined how you will create your XML data packets in your system; we recommend reviewing each element and attribute and when they are best used. The “**Data Packet – XML Specification**” provides links to XML templates, and text description of the regular expressions, data types, or enumerations that control the allowed data formats for each element.
+Once you have determined how you will create your XML data packets in your system; we recommend reviewing each element and attribute and when they are best used. The Data Packet – XML Specification(#DataPacketXMLSpecification) provides links to XML templates, and text description of the regular expressions, data types, or enumerations that control the allowed data formats for each element.
 
 ## **Data Identification**
 The specification for the Authorization Gateway XML Data Packet allows you to optionally identify your data in two distinct ways. The **REQUEST_ID** attribute contained within the AUTH_GATEWAY element and the **TRANSACTION_ID** element. These are built in so your host system can match a response from the Authorization Gateway with the original request. 
@@ -285,7 +285,7 @@ When the AuthGatewayCertification web method receives a request it will first va
 
 The host system should always check each response to make sure the RESULT child element of the VALIDATION_MESSAGE is set to “Passed”.  If it is not, then there are validation errors and the transaction was not processed. The host system will have to correct any validation errors outlined in the VALIDATION_ERROR element(s) and then resubmit the request XML Data Packet.
 
-## **Data Packet – XML Specification**
+## <a name="DataPacketXMLSpecification"></a>**Data Packet – XML Specification**
 The data packet is an XML string sent using the AuthGatewayCertification, ProcessSingleCheck, and ProcessSingleCheckWithToken web methods. The XML data packet must conform to the XSD specified in the Terminal Settings. The XML Template provided in the Terminal Settings can be used as a basis to create the Data Packet.
 
 _NOTE:  Methods with Token will operate the same as those without tokens. Tokens are used in place of Account Type, Routing Number, and Account Number._
