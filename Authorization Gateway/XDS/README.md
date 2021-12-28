@@ -1,4 +1,4 @@
-# 13.0 How to determine which XSD to Use 
+# How to determine which XSD to Use 
 
 The XSD that will be used can be retrieved from the Terminal Settings, but can also be determined by using the criteria below.   
 
