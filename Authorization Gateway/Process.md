@@ -58,6 +58,7 @@ Link to [XML Examples](https://github.com/TKESuperDave/PayaServices/tree/XML/Aut
 # **Phase 2 Development**
 
 **Interfacing with the Authorization Gateway**
+
 The best place to start is to determine your application architecture for interfacing with the Authorization Gateway.  You will choose which published XSD(s) your XML data packets will be validated against, and you also know the URL for the corresponding XML template(s) for your schema(s).  
 This leaves you with the following possibilities for creating your XML data packets that are sent to the Authorization Gateway:
 
@@ -79,11 +80,11 @@ The specification for the Authorization Gateway XML Data Packet allows you to op
 These identifiers are not inherently unique, rather the Authorization Gateway leaves the responsibility of determining if an identifier is unique to the host system. It is not required that optional identifiers are unique, but it is strongly recommended. If an identifier is not unique it may become difficult for your host system to match responses or retrieve archived responses.  In the examples we have provided, GUIDs have been used as optional identifiers. The use of GUIDs ensures uniqueness, but any value can be used as an identifier, including database identity column values. It is also important to note that if the implementation team determines an identifier needs to be unique, that it only needs to be unique for a specific terminal ID, but it can be unique across all terminal IDs for a given user. 
  
 
-The REQUEST_ID attribute should be a unique identifier that is used to identify the overall data packet. When your data packet is received by the Authorization Gateway it is processed, and asynchronously stored along with the response. This is done so the host system can invoke the GetArchivedResponse web method to request a previous response. 
+### The REQUEST_ID attribute should be a unique identifier that is used to identify the overall data packet. When your data packet is received by the Authorization Gateway it is processed, and asynchronously stored along with the response. This is done so the host system can invoke the GetArchivedResponse web method to request a previous response. 
 
 The GetArchivedResponse web method accepts the REQUEST_ID as an input parameter and will return the corresponding response.  It is important to note that the GetArchivedResponse is a production only web method and can only be effectively used if the host system keeps track of and submits values in the REQUEST_ID attribute.  The value in the REQUEST_ID attribute of the request data packet is also returned in the response data packet in the REQUEST_ID attribute of the RESPONSE element.
 
-The TRANSACTION_ID element should be a unique identifier that is used to identify a specific transaction.  The value contained in the TRANSACTION_ID element is recorded by the Authorization Gateway but is not used internally and cannot be used to request a specific transaction. The value in the TRANSACTION_ID element is however returned in the response data packet in the TRANSACTION_ID element within the parent AUTHORIZATION_MESSAGE element. This was done so that your host system can match the response for a specific transaction to an internal record in the host system. 
+### The TRANSACTION_ID element should be a unique identifier that is used to identify a specific transaction.  The value contained in the TRANSACTION_ID element is recorded by the Authorization Gateway but is not used internally and cannot be used to request a specific transaction. The value in the TRANSACTION_ID element is however returned in the response data packet in the TRANSACTION_ID element within the parent AUTHORIZATION_MESSAGE element. This was done so that your host system can match the response for a specific transaction to an internal record in the host system. 
 
 ## **Valid Identifiers**
 Each request XML Data Packet must contain a valid identifier for its schema. The identifier you use will change depending on the context of the transaction being sent. Your integration team will become more familiar with the different identifiers as you begin to work on each milestone. However, a list of all the valid identifiers can be found below.  
