@@ -1,4 +1,4 @@
-# 12.0 How to determine which XML Template to Use 
+## **How to determine which XML Template to Use** 
 
 The XML data packet can be built from scratch by the web service consumer or one of the available XML templates can be used to build the XML data packet prior to submitting the data packet to the Authorization Gateway. The URI for the XML data packet for a given terminal can be retrieved from the Terminal Settings but can also be determined by using the criteria below. 
 
