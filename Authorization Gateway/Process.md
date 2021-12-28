@@ -4,7 +4,7 @@
 
 Once you have successfully connected to the Authorization Gateway and are comfortable with adding the SOAP header, you will test your request and response with the GetCertificationTerminalSettings.
  
-The GetCertificationTerminalSettings web method is defined in the “**Terminal Settings – XML Specification**(#Terminal Settings – XML Specification)” section, providing an example of the request and response. The invocation of this web method is part of the Preparation Phase because it is the simplest web method and requires no input parameters.
+The GetCertificationTerminalSettings web method is defined in the Terminal Settings – XML Specification(#Terminal Settings – XML Specification) section, providing an example of the request and response. The invocation of this web method is part of the Preparation Phase because it is the simplest web method and requires no input parameters.
 
 This web method can be invoked if your implementation team determines the host system needs to acquire information about the Authorization Gateway Terminal, and does not need to be invoked on a continuous basis.
 
@@ -244,7 +244,7 @@ _NOTE: Using this method by passing the Account Type, Routing Number, and Accoun
   - **Input**:  Accepts an XML string called a data packet that must conform to the schema provided in this [Link](https://demo.eftchecks.com/webservices/Schemas/other/parsemicr.xsd).
   - **Output**: Outputs an XML string.
 
- <a name="Terminal Settings – XML Specification"></a> ## **Terminal Settings – XML Specification** 
+## <a name="Terminal Settings – XML Specification"></a>Terminal Settings – XML Specification 
 The GetCertificationTerminalSettings and GetTerminalSettings web methods will return the following XML string.
 
 ### **Terminal Settings XML Example**:
