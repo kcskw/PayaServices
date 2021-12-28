@@ -66,7 +66,7 @@ This leaves you with the following possibilities for creating your XML data pack
 3.	You can load the XML template into an XML document object and use Xpath to populate the elements and attributes.
 4.	You can build your own XML document and use Xpath to populate the elements and attributes.
 
-We recommend you leverage the published XSDs and XML templates and use either the first or second options when creating the data packets to be sent. All these methods use the .NET platform however other languages have successfully been used. 
+We recommend you leverage the published [XSDs](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS) and [XML](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML) templates and use either the first or second options when creating the data packets to be sent. All these methods use the .NET platform however other languages have successfully been used. 
 
 We have provided example request XML Data Packets to assist your integration team with getting started. A link to these examples can be found at the end of the “How to determine which XML Template to Use” section.
 
@@ -578,51 +578,53 @@ A matrix of the available XML Templates for each SEC code can be found below. Th
 |     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/Check21%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1617                           |
 
 
-## **XML Templates using Tokens**
+## [**XML Templates using Tokens**](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML/With%20Tokens)
 
 A matrix of the available XML Templates when using tokens for each SEC code can be found below. Each grid contains the name of the XML Template, based on the XML Templates determining criteria, and a link to the actual XML Template. 
 
-### **PPD XML Templates**
+### [**PPD XML Templates**](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML/With%20Tokens/PPD%20Templates)
 (Root path:  https://demo.eftchecks.com/webservices/schemas/ppd/templates)
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     1010 / 2010                                   |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     1011 / 2011                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     1012 / 2012                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     1013 / 2013                                   |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     1014 / 2014                                   |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     1015 / 2015                                   |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     1016 / 2016                                   |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     1017 / 2017                                   |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 1010 / 2010                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 1011 / 2011                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 1012 / 2012                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 1013 / 2013                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 1014 / 2014                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 1015 / 2015                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 1016 / 2016                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 1017 / 2017                            |
 
-### **CCD XML Templates	**
+### [**CCD XML Templates**](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML/With%20Tokens/CCD%20Templates)
 (Root path:  https://demo.eftchecks.com/webservices/schemas/ccd//templates)
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     1710 / 2710                                   |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     1711 / 2711                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     1712 / 2712                                   |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     1713 / 2713                                   |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     1714 / 2714                                   |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     1715 / 2715                                   |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     1716 / 2716                                   |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     1717 / 2717                                   |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  (Guar/Non)  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 1710 / 2710                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 1711 / 2711                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 1712 / 2712                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 1713 / 2713                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 1714 / 2714                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 1715 / 2715                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 1716 / 2716                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 1717 / 2717                            |
+
 
 ### **WEB XML Templates	**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/web/templates)
 
-|     Template                                                        |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID    |
-|---------------------------------------------------------------------|------------------------|-------------------------|----------------------|------------------------------------|
-|     CheckNoVerificationDLWithTokenOptional.xml                      |                        |                         |                      |     2310                           |
-|     CheckNoVerificationDLWithTokenRequired.xml                      |     X                  |                         |                      |     2311                           |
-|     CheckVerificationIdentityVerificationDLWithTokenOptional.xml    |                        |     X                   |     X                |     2312                           |
-|     CheckVerificationIdentityVerificationDLWithTokenRequired.xml    |     X                  |     X                   |     X                |     2313                           |
-|     CheckVerificationOnlyDLWithTokenOptional.xml                    |                        |     X                   |                      |     2314                           |
-|     CheckVerificationOnlyDLWithTokenRequired.xml                    |     X                  |     X                   |                      |     2315                           |
-|     IdentityVerificationOnlyDLWithTokenOptional.xml                 |                        |                         |     X                |     2316                           |
-|     IdentityVerificationOnlyDLWithTokenRequired.xml                 |     X                  |                         |     X                |     2317                           |
+| Template                                                      | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
+|---------------------------------------------------------------|---------------|----------------|-------------|----------------------------------------|
+| [CheckNoVerificationDLWithTokenOptional.xml](CheckNoVerificationDLWithTokenOptional.xml)                    |               |                |             | 2310                            |
+| [CheckNoVerificationDLWithTokenRequired.xml](CheckNoVerificationDLWithTokenRequired.xml)                    | X             |                |             | 2311                            |
+| [CheckVerificationIdentityVerificationDLWithTokenOptional.xml](CheckVerificationIdentityVerificationDLWithTokenOptional.xml)  |               | X              | X           | 2312                            |
+| [CheckVerificationIdentityVerificationDLWithTokenRequired.xml](CheckVerificationIdentityVerificationDLWithTokenRequired.xml)  | X             | X              | X           | 2313                            |
+| [CheckVerificationOnlyDLWithTokenOptional.xml](CheckVerificationOnlyDLWithTokenOptional.xml)                  |               | X              |             | 2314                            |
+| [CheckVerificationOnlyDLWithTokenRequired.xml](CheckVerificationOnlyDLWithTokenRequired.xml)                  | X             | X              |             | 2315                            |
+| [IdentityVerificationOnlyDLWithTokenOptional.xml](IdentityVerificationOnlyDLWithTokenOptional.xml)               |               |                | X           | 2316                            |
+| [IdentityVerificationOnlyDLWithTokenRequired.xml](IdentityVerificationOnlyDLWithTokenRequired.xml)               | X             |                | X           | 2317                            |
+
 
 ### **TEL XML Templates**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/tel/templates)
@@ -755,7 +757,7 @@ Root path:  https://demo.eftchecks.com/webservices/schemas/pop/templates)
 |      OCRIdentityVerification.xml    |     O               |     X                  |     X                |     4323                           |
 |      OCRIdentityVerification.xml    |     F               |     X                  |     X                |     4333                           |
 
-## **How to determine which XSD to Use**
+## [**How to determine which XSD to Use**](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS)
 The XSD that will be used can be retrieved from the Terminal Settings, but can also be determined by using the criteria below.  
 
 The root path for all XSDs is http://demo.eftchecks.com/webservices/Schemas followed by the SEC Code and Schema Name. The Schema Name is determined by the following criteria:
