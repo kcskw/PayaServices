@@ -8,5 +8,4 @@
 | [CheckVerificationOnlyDLOptional.xsd](CheckVerificationOnlyDLOptional.xsd)                        |               |       X        |             |            1114            |
 | [CheckVerificationOnlyDLRequired.xsd](CheckVerificationOnlyDLRequired.xsd)                        |       X       |       X        |             |            1115            |
 | [IdentityVerificationOnlyDLOptional.xsd](IdentityVerificationOnlyDLOptional.xsd)                     |               |                |      X      |            1116            |
-| [IdentityVerificationOnlyDLRequired.xsd](IdentityVerificationOnlyDLRequired.xsd)                     |       X       |                |      X      |            1117            |
-| 
+| [IdentityVerificationOnlyDLRequired.xsd](IdentityVerificationOnlyDLRequired.xsd)                     |       X       |                |      X      |            1117            | 
