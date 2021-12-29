@@ -1,4 +1,4 @@
-|                          Template                          | DL  Required  | Verify  [Ng_Check  | Verify  ID  | Certification Terminal ID  |
+|                          Template                          | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
 |:----------------------------------------------------------:|:-------------:|:--------------:|:-----------:|:--------------------------:|
 | [Ng_CheckNoVerificationDLOptional.xsd](Ng_CheckNoVerificationDLOptional.xsd)                          |               |                |             |            2210            |
 | [Ng_CheckNoVerificationDLRequired.xsd](Ng_CheckNoVerificationDLRequired.xsd)                          |       X       |                |             |            2211            |
