@@ -1,4 +1,4 @@
-|                          Template                          | DL  Required  | Verify  [Check  | Verify  ID  | Certification Terminal ID  |
+|                          Template                          | DL  Required  | Verify  Check  | Verify  ID  | Certification Terminal ID  |
 |:----------------------------------------------------------:|:-------------:|:--------------:|:-----------:|:--------------------------:|
 |                 **Debit Only Transactions**                  |               |                |             |                            |
 | [CheckNoVerificationDLOptional.xsd](CheckNoVerificationDLOptional.xsd)                          |               |                |             |            1010            |
