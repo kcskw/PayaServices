@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xs:schema id="AUTH_GATEWAY" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+<xs:include id="AUTH_GATEWAY_TYPES" schemaLocation="..//Types/AuthGatewayTypes.xsd" />
+
+  <xs:element name="AUTH_GATEWAY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TRANSACTION" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+			      <xs:element name="TRANSACTION_ID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="MERCHANT" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TERMINAL_ID" type="terminalid" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PACKET" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                  <xs:element name="IDENTIFIER" type="ppdidentifier" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="ACCOUNT" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:choice minOccurs="1" maxOccurs="1">
+                          <xs:sequence>
+                            <xs:element name="ROUTING_NUMBER" type="routingnumber" minOccurs="1" maxOccurs="1" />
+                            <xs:element name="ACCOUNT_NUMBER" type="accountnumber" minOccurs="1" maxOccurs="1" />
+                            <xs:element name="ACCOUNT_TYPE" type="accounttype" minOccurs="1" maxOccurs="1" />
+                          </xs:sequence>
+                          <xs:element name="TOKEN" type="accounttoken" minOccurs="1" maxOccurs="1" />
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CONSUMER" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FIRST_NAME" type="name" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="LAST_NAME" type="name" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="ADDRESS1" type="address-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="ADDRESS2" type="address-or-empty" minOccurs="1" maxOccurs="1"/>
+                          <xs:element name="CITY" type="city-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="STATE" type="states-and-provinces-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="ZIP" type="zip-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="PHONE_NUMBER" type="phonenumber-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="DL_STATE" type="states-and-provinces-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="DL_NUMBER" type="dlnumber-or-empty" minOccurs="1" maxOccurs="1" />
+                          <xs:element name="COURTESY_CARD_ID" type="COURTESYcard-or-empty" minOccurs="1" maxOccurs="1" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CHECK" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CHECK_AMOUNT" type="amount-credit" minOccurs="1" maxOccurs="1" />
+                         </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CUSTOM" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CUSTOM1" type="custom-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="CUSTOM2" type="custom-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="CUSTOM3" type="custom-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="CUSTOM4" type ="custom-or-empty" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ECODE_OPTIONS" type="ECodeType" minOccurs="0" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ACHAddendum" type="addendaRecords" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="REQUEST_ID" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
