@@ -22,13 +22,13 @@ The individual phases are outlined below and include a table that defines the mi
 Preparation Phase Milestones:
 
 - Obtain a User Name and Password for Certification:  
-This user name and password will be unique to your team and will only allow you to invoke web methods used for certification. These will be separate from the production credentials you will receive once your certification is complete. 
+This user name and password will be unique to your team and will only allow you to invoke web methods used for certification. _These will be separate from the production credentials you will receive once your certification is complete. 
 
 - Determine your SEC Code(s):  The SEC Codes are defined later in this document and are the main factor in determining what XML Template and Schema to use.
 
-- Determine your XML Template(s):  Once you have determined your SEC Code you can determine which XML Template to use.  The “**How to determine which XML Template to Use**” section of this document explains the purpose of the XML templates and will assist you in determining which Template(s) to use.
+- Determine your XML Template(s):  Once you have determined your SEC Code you can determine which XML Template to use.  The [How to determine which XML Template to Use](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md#how-to-determine-which-xml-template-to-use) section in the [Process](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md) document explains the purpose of the XML templates and will assist you in determining which Template(s) to use.
 
-- Determine your XML Schema(s): Once you have determined your SEC Code you can also determine which XSD will be used to validate your data packet submission.  The “How to determine which XSD to Use” section of this document explains the purpose of the XSDs and will assist you in determining which XSD(s) to use.
+- Determine your XML Schema(s): Once you have determined your SEC Code you can also determine which XSD will be used to validate your data packet submission.  The [How to determine which XSD to Use](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md#how-to-determine-which-xsd-to-use) section of the [Process](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md) document explains the purpose of the XSDs and will assist you in determining which XSD(s) to use.
 
 - Determine your Certification Terminal IDs: Once you have determined your XSD(s), you can easily find the corresponding Certification Terminal ID listed in the same row as the XSD URL. 
 
@@ -37,9 +37,10 @@ This user name and password will be unique to your team and will only allow you 
 - Request Certification Terminal Settings: Successfully invoke the GetCertificationTerminalSettings web method for each Certification Terminal ID previously identified.
 
 ## Phase 2: Development
-During this phase the integration team will be responsible for ensuring the host application can properly handle Authorizations, Declines, Voids, Reversals and in some cases Credits, Represented Checks and Manager Overrides. 
 
-The section below entitled “Beginning Authorization Gateway Development” details the business logic necessary to complete each milestone in this phase. The completion of this phase marks the opportunity to begin the Certification Phase.
+During this phase the integration team will be responsible for ensuring the host application can properly handle **Authorizations**, **Declines**, **Voids**, **Reversals** and in some cases **Credits**, **Represented Checks** and **Manager Overrides**. 
+
+The section [Process](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md) document, entitled [Interfacing with the Authorization Gateway](https://github.com/kcskw/PayaServices/blob/patch-1/Authorization%20Gateway/Process.md#phase-2-development), details the business logic necessary to complete each milestone in this phase. The completion of this phase marks the opportunity to begin the Certification Phase.
 
 
 Development Phase Milestones
