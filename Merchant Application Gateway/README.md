@@ -2,4 +2,4 @@
 
 ## Introduction
 
-This guide is for transferring Merchant Applications to Paya services. it details the communication method, application request specifications, and response specifications to create an interface for processing Merchant Applications. 
+This guide is to create an interface for processing Merchant Applications, transferring Merchant Applications to Paya services. It details the communication method, application request specifications, and response specifications. 
