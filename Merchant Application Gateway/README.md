@@ -2,4 +2,4 @@
 
 ## Introduction
 
-This document serves as a technical guide for transmitting merchant applications to Paya Services and details the communication method, application request specifications, and response specifications.  Its purpose is to provide software developers with the necessary information to create an interface for processing merchant applications.
+This guide is for transferring Merchant Applications to Paya services. it details the communication method, application request specifications, and response specifications to create an interface for processing Merchant Applications. 
