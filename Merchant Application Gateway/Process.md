@@ -38,12 +38,6 @@ The Application Gateway has been designed for fast and easy integration with you
 
 (Please Holder Example) 
 
-# **Web Methods**
-
-A definition of the web methods can be found below. Each web method contains a hyperlink to a sample SOAP request and response.
-
-_NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
-
 ***Note about Special Characters**
 Because the Data packet is XML, some special characters must be escaped to be included in the data. Please see the examples below.
 
@@ -54,6 +48,12 @@ Because the Data packet is XML, some special characters must be escaped to be in
 |     Greater-than         |     >         |     \&gt;            |
 |     Quotes               |     “         |     \&quot;          |
 |     Apostrophe           |     ‘         |     \&apos;          |
+
+# **Web Methods**
+
+A definition of the web methods can be found below. Each web method contains a hyperlink to a sample SOAP request and response.
+
+_NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
 
 ## **ACH Certification Methods**
 
