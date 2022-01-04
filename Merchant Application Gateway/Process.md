@@ -1,10 +1,11 @@
 # **Overview**
 
-The Application Gateway is designed to accommodate various input requirements. This allows for the development of a single interface that can be easily configured to handle many different scenarios.
+Our Application Gateway is designed to accommodate various input requirements, allowing development of a single interface configured to handle many different scenarios.
 
-The Application Gateway uses web services to present distributed methods for integration into client applications, and an interface with the Application Gateway can be developed with any programming language that can consume a web service.
+The Application Gateway uses web services to present distributed methods for integration into client applications, and an interface can be developed with any programming language that can consume a web service.
 
-Extensible Markup Language (XML) is used to send data packet requests to the Authorization Gateway and to receive a response back.  Simple Object Access Protocol (SOAP) is used for XML message exchange over HTTPS. The Application Gateway also employs a custom SOAP header for authentication information. 
+We use (XML)Extensible Markup Language, to send data packet requests and receive responses from the Authorization Gateway.  Simple Object Access Protocol (SOAP) is used for XML message exchange over HTTPS, we also employ a custom SOAP header for authentication information. 
+
 
 # **Connection Method**
 Paya Services supports connection via secure (https) webservice using SOAP.  SOAP is a simple XML-based protocol to let applications exchange information over HTTP.  
@@ -42,6 +43,17 @@ The Application Gateway has been designed for fast and easy integration with you
 A definition of the web methods can be found below. Each web method contains a hyperlink to a sample SOAP request and response.
 
 _NOTE: Board Location and Board Terminal will use the Data from Board Merchant._
+
+***Note about Special Characters**
+Because the Data packet is XML, some special characters must be escaped to be included in the data. Please see the examples below.
+
+|     Special Character    |     Symbol    |     Escaped Form     |
+|--------------------------|---------------|----------------------|
+|     Ampersand            |     &         |     \&amp;           |
+|     Less-than            |     <         |     \&lt;            |
+|     Greater-than         |     >         |     \&gt;            |
+|     Quotes               |     “         |     \&quot;          |
+|     Apostrophe           |     ‘         |     \&apos;          |
 
 ## **ACH Certification Methods**
 
