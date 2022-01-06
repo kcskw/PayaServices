@@ -27,6 +27,7 @@ The Authorization Gateway uses the Standard Entry Class (SEC) codes to determine
 
 
 ## **How to determine which XML Template to Use**
+
 The XML data packet can be built from scratch or one of the available XML templates can be used to build the XML data packet prior to submitting to the Authorization Gateway. The URI for the XML data packet for a given terminal can be retrieved from the Terminal Settings but can also be determined by using the criteria below.
 
 The root path for all XML Templates is https://demo.eftchecks.com/webserivces/schemas/  followed by the SEC Code, “/Templates/”, and the XML Template name.  The XML Template is determined by the following criteria:
@@ -35,11 +36,25 @@ The root path for all XML Templates is https://demo.eftchecks.com/webserivces/sc
  - 	If the Terminal is configured for Check Verification.
  - 	If the Terminal is configured for Identity Verification.
 
-A matrix of the available XML Templates for each SEC code can be found in the XML templates section. Each grid contains the name of the XML Template, based on the XML Templates determining criteria, and a link to the actual XML Template. 
+## [**How to determine which XSD to Use**](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS)
+                       
+The XSD that will be used can be retrieved from the Terminal Settings, but can also be determined by using the criteria below.  
 
-The grid also includes the Terminal IDs that can be used for testing and certifying the XML data packet that can be built from the provided XML Template. The Terminal ID will be different for guaranteed transactions and Non-guaranteed transactions.  Guaranteed terminals are numbered 1xxx, and Non-guaranteed terminals are numbered 2xxx.
+The root path for all XSDs is http://demo.eftchecks.com/webservices/Schemas followed by the SEC Code and Schema Name. The Schema Name is determined by the following criteria:
 
-There are also published example XML data packets that contain example data. 
+ - If the Terminal requires the Driver’s License Information. 
+ - If the Terminal is configured for Check Verification.
+ - If the Terminal is configured for Identity Verification.
+ - For PPD and CCD entries, If the Terminal is configured to allow Credit entries   
+   
+A matrix of the available XML Templates, and XSD Schemas for each SEC code can be found in the XML/XSD section, by SEC code. Each grid contains links to the templates and the schema needed determined by your required criteria. The grid also includes the Terminal IDs that can be used for testing and certifying against the provided schema. The Terminal ID will be different for guaranteed transactions and Non-guaranteed transactions.  
+  
+**Guaranteed terminals are numbered 1xxx, and Non-guaranteed terminals are numbered 2xxx**
+
+An example XSD file path for a PPD terminal that does not require the driver’s license information, is setup for check verification, and is setup for identity verification, and does not allow credits would be as follows: 
+https://demo.eftchecks.com/webservices/schemas/ppd/CheckVerificationIdentityVerificationDLOptional.xsd
+
+There are published example XML data packets that contain example data, and XSD Schema packets. 
 https://demo.eftchecks.com/webservices/schemas/ppd/examples/CheckVerificationIdentityVerificationDLOptional.xml
 
 ***Note about Special Characters**
@@ -54,6 +69,8 @@ Because the Data packet is XML, some special characters must be escaped to be in
 |     Apostrophe           |     ‘         |     \&apos;          |
 
 Link to [XML Examples](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML)
+Link to [XSD Schemas](https://github.com/PayaDev/PayaServices/tree/main/Authorization%20Gateway/XSD)
+
 
 # **Phase 2 Development**
 
