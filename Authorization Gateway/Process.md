@@ -25,6 +25,24 @@ The Authorization Gateway uses the Standard Entry Class (SEC) codes to determine
 
 •	**C21** - Check 21 :  Although not an SEC Code C21 is used to denote Check 21 transactions. Check 21 requires a check reading device capture the routing number, account number, and check number from the source document (Check) as well as capture images of both the front and back of the source document.  
 
+# **Phase 2 Development**
+
+**Interfacing with the Authorization Gateway**
+
+The best place to start is to determine your application architecture for interfacing with the Authorization Gateway.  You will choose which published XSD(s) your XML data packets will be validated against, and you also know the URL for the corresponding XML template(s) for your schema(s).  
+This leaves you with the following possibilities for creating your XML data packets that are sent to the Authorization Gateway:
+
+1.	XML Schema Definition Tool (such as Xsd.exe for .Net or Svcutil.exe) to generate a class based on the published XSD, populate the class properties, and then serialize the object.
+2.	LINQ to XML to build your xml and populate the elements and attributes.
+3.	You can load the XML template into an XML document object and use Xpath to populate the elements and attributes.
+4.	You can build your own XML document and use Xpath to populate the elements and attributes.
+
+We recommend you leverage the published [XSDs](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS) and [XML](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML) templates and use either the first or second options when creating the data packets to be sent. All these methods use the .NET platform however other languages have successfully been used. 
+
+We have provided example request XML Data Packets to assist your integration team with getting started. A link to these examples can be found at the end of the “How to determine which XML Template to Use” section above.
+
+
+Once you have determined how you will create your XML data packets in your system; we recommend reviewing each element and attribute and when they are best used. The Data Packet – XML Specification(#DataPacketXMLSpecification) provides links to XML templates, and text description of the regular expressions, data types, or enumerations that control the allowed data formats for each element.
 
 ## **How to determine which XML Template to Use**
 
@@ -71,25 +89,6 @@ Because the Data packet is XML, some special characters must be escaped to be in
 Link to [XML Examples](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML)
 Link to [XSD Schemas](https://github.com/PayaDev/PayaServices/tree/main/Authorization%20Gateway/XSD)
 
-
-# **Phase 2 Development**
-
-**Interfacing with the Authorization Gateway**
-
-The best place to start is to determine your application architecture for interfacing with the Authorization Gateway.  You will choose which published XSD(s) your XML data packets will be validated against, and you also know the URL for the corresponding XML template(s) for your schema(s).  
-This leaves you with the following possibilities for creating your XML data packets that are sent to the Authorization Gateway:
-
-1.	XML Schema Definition Tool (such as Xsd.exe for .Net or Svcutil.exe) to generate a class based on the published XSD, populate the class properties, and then serialize the object.
-2.	LINQ to XML to build your xml and populate the elements and attributes.
-3.	You can load the XML template into an XML document object and use Xpath to populate the elements and attributes.
-4.	You can build your own XML document and use Xpath to populate the elements and attributes.
-
-We recommend you leverage the published [XSDs](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XDS) and [XML](https://github.com/TKESuperDave/PayaServices/tree/XML/Authorization%20Gateway/XML) templates and use either the first or second options when creating the data packets to be sent. All these methods use the .NET platform however other languages have successfully been used. 
-
-We have provided example request XML Data Packets to assist your integration team with getting started. A link to these examples can be found at the end of the “How to determine which XML Template to Use” section above.
-
-
-Once you have determined how you will create your XML data packets in your system; we recommend reviewing each element and attribute and when they are best used. The Data Packet – XML Specification(#DataPacketXMLSpecification) provides links to XML templates, and text description of the regular expressions, data types, or enumerations that control the allowed data formats for each element.
 
 ## **Data Identification**
 The specification for the Authorization Gateway XML Data Packet allows you to optionally identify your data in two distinct ways. The **REQUEST_ID** attribute contained within the AUTH_GATEWAY element and the **TRANSACTION_ID** element. These are built in so your host system can match a response from the Authorization Gateway with the original request. 
