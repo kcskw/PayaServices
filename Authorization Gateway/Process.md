@@ -326,9 +326,10 @@ This XML data packet example contains all available elements. The elements and d
         <DL_NUMBER>D12346544</DL_NUMBER>
         <COURTESY_CARD_ID></COURTESY_CARD_ID>
         <IDENTITY>
+	  <SSN></SSN>
           <DOB_YEAR>1961</DOB_YEAR>
         </IDENTITY>
-</CONSUMER>
+      </CONSUMER>
       <CHECK>
         <CHECK_AMOUNT>1.25</CHECK_AMOUNT>
         <IMAGE_FRONT />
