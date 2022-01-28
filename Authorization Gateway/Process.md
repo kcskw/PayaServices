@@ -410,7 +410,8 @@ This XML data packet example contains all available elements. The elements and d
 ### **Authorization Gateway XML Data Packet with Token Example**:
 
 This XML data packet example contains all available elements. The elements and data types that are required for a specific terminal are defined in that terminal’s XSD.
-```
+```XML
+
 <?xml version=”1.0” encoding=”utf-8”?>
 <AUTH_GATEWAY REQUEST_ID=”4654”>
 <TRANSACTION>
@@ -533,7 +534,7 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 
 
 
-### **CCD XML Templates**
+### **CCD XSD Schemas with XML Template examples**
 
 |                                                               | Certification Terminal ID |                |                       |               |                         |
 |---------------------------------------------------------------|:-------------------------:|:--------------:|:---------------------:|:-------------:|:-----------------------:|
