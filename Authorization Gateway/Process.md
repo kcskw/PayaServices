@@ -562,18 +562,18 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 ### **WEB XSD Schemas with XML Template examples**
 
 
-|                           WEB                          | Certification   Terminal ID |                      |               |                         |
-|:------------------------------------------------------:|:---------------------------:|----------------------|---------------|-------------------------|
-|               **Debit Only Transactions**              |   Non-Guarenteed   2000's   | XSD   Non-Guarenteed | XML   Example | XML   Exampl with Token |
-|            Check No Verification DL Optional           |             2310            |        [XSD]()       |    [XML]()    |         [XML]()         |
-|            Check No Verification DL Required           |             2311            |        [XSD]()       |    [XML]()    |         [XML]()         |
-| Check Verification Identity Verification   DL Optional |             2312            |        [XSD]()       |    [XML]()    |         [XML]()         |
-| Check Verification Identity Verification   DL Required |             2313            |        [XSD]()       |    [XML]()    |         [XML]()         |
-|           Check Verification Only DL Optional          |             2314            |        [XSD]()       |    [XML]()    |         [XML]()         |
-|           Check Verification Only DL Required          |             2315            |        [XSD]()       |    [XML]()    |         [XML]()         |
-|         Identity Verification Only DL Optional         |             2316            |        [XSD]()       |    [XML]()    |         [XML]()         |
-|         Identity Verification Only DL Required         |             2317            |        [XSD]()       |    [XML]()    |         [XML]()         |
-
+|     **WEB**                                                      |     Certification   Terminal ID |                          |                   |                                |
+|--------------------------------------------------------------|:-------------------------------:|--------------------------|-------------------|--------------------------------|
+|                                                              |                                 |                          |                   |                                |
+|     **Debit Only Transactions**                              |       Non-Guarenteed   2000's   |     XSD   Non-Guarenteed |     XML   Example |     XML   Exampl with Token    |
+|     Check No Verification DL Optional                        |                 2310            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Check No Verification DL Required                        |                 2311            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Check Verification Identity   Verification   DL Optional |                 2312            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Check Verification Identity   Verification   DL Required |                 2313            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Check Verification Only DL Optional                      |                 2314            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Check Verification Only DL Required                      |                 2315            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Identity Verification Only DL Optional                   |                 2316            |            [XSD]()       |        [XML]()    |             [XML]()            |
+|     Identity Verification Only DL Required                   |                 2317            |            [XSD]()       |        [XML]()    |             [XML]()            |
 
 ### **TEL XML Templates**	
 
