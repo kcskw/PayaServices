@@ -536,9 +536,9 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 
 ### **CCD XSD Schemas with XML Template examples**
 
-|                                                               | Certification Terminal ID |                |                       |               |                         |
+|   **CCD**                                                            | Certification Terminal ID |                |                       |               |                         |
 |---------------------------------------------------------------|:-------------------------:|:--------------:|:---------------------:|:-------------:|:-----------------------:|
-|                              **CCD**                              |    Guarenteed   1000's    |                |                       |               |                         |
+|                                                |    Guarenteed   1000's    |                |                       |               |                         |
 |                  **Debit Only Transactions**                  |  Non-Guarenteed   2000's  | XSD Guarenteed | XSD Non-   Guarenteed | XML   Example | XML   Exampl with Token |
 | Check No Verification DL Optional                             |        1710 / 2710        |     [XSD]()    |        [XSD]()        |    [XML]()    |         [XML]()         |
 | Check No Verification DL Required                             |        1711 / 2711        |     [XSD]()    |        [XSD]()        |    [XML]()    |         [XML]()         |
@@ -577,19 +577,18 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 
 ### **TEL XML Templates**	
 
-(Root path:  https://demo.eftchecks.com/webservices/schemas/tel/templates)
-
-|     Template                                               |     DL     Required    |     Verify     Check    |     Verify     ID    |     Certification   Terminal ID     (Guar/Non)    |
-|------------------------------------------------------------|------------------------|-------------------------|----------------------|---------------------------------------------------|
-|     [CheckNoVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckNoVerficationDLOptional.xml)                      |                        |                         |                      |     1210 / 2210                                   |
-|     [CheckNoVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckNoVerficationDLRequired.xml)                      |     X                  |                         |                      |     1211 / 2211                                   |
-|     [CheckVerificationIdentityVerificationDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationIdentityVerificationDLOptional.xml)    |                        |     X                   |     X                |     1212 / 2212                                   |
-|     [CheckVerificationIdentityVerificationDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationIdentityVerificationDLRequired.xml)    |     X                  |     X                   |     X                |     1213 / 2213                                   |
-|     [CheckVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationOnlyDLOptional.xml)                    |                        |     X                   |                      |     1214 / 2214                                   |
-|     [CheckVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/CheckVerificationOnlyDLRequired.xml)                    |     X                  |     X                   |                      |     1215 / 2215                                   |
-|     [IdentityVerificationOnlyDLOptional.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/IdentityVerificationOnlyDLOptional.xml)                 |                        |                         |     X                |     1216 / 2216                                   |
-|     [IdentityVerificationOnlyDLRequired.xml](https://github.com/TKESuperDave/PayaServices/blob/XML/Authorization%20Gateway/XML/Standard/TEL%20Templates/IdentityVerificationOnlyDLRequired.xml)                 |     X                  |                         |     X                |     1217 / 2217                                   |
-
+| **TEL**                                    | Certification   Terminal ID |                |                     |             |                       |
+|------------------------------------------------------|-----------------------------|----------------|---------------------|-------------|-----------------------|
+|                                                      | Guarenteed 1000's           | XSD Guarenteed | XSD Non- Guarenteed | XML Example | XML Exampl with Token |
+| **Debit Only Transactions**                       | Non-Guarenteed 2000's       | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check N oVerification DL Optional                    | 1210 / 2210                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check No Verification D Required                     | 1211 / 2211                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check Verification Identity Verification DL Optional | 1212 / 2212                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check Verification Identity Verification DL Required | 1213 / 2213                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check Verification Only DL Optional                  | 1214 / 2214                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Check Verification Only DL Required                  | 1215 / 2215                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Identity Verification Only DL Optional               | 1216 / 2216                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+| Identity Verification Only DL Required               | 1217 / 2217                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
 
 ### **POP XML Templates	**
 (Root path:  https://demo.eftchecks.com/webservices/schemas/pop/templates)
