@@ -575,7 +575,7 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 |     Identity Verification Only DL Optional                   |                 2316            |            [XSD]()       |        [XML]()    |             [XML]()            |
 |     Identity Verification Only DL Required                   |                 2317            |            [XSD]()       |        [XML]()    |             [XML]()            |
 
-### **TEL XML Templates**	
+### **TEL XSD Schemas with XML Template examples**	
 
 | **TEL**                                    | Certification   Terminal ID |                |                     |             |                       |
 |------------------------------------------------------|-----------------------------|----------------|---------------------|-------------|-----------------------|
@@ -589,6 +589,8 @@ A matrix of the available XML Templates and XSD Schmimas for each SEC code can b
 | Check Verification Only DL Required                  | 1215 / 2215                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
 | Identity Verification Only DL Optional               | 1216 / 2216                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
 | Identity Verification Only DL Required               | 1217 / 2217                 | [XSD]()        | [XSD]()             | [XML]()     | [XML]()               |
+
+### **POP XSD Schemas with XML Template examples**
 
 | **POP**                                              | Certification   Terminal   ID |                |               |                            |                       |
 |------------------------------------------------------|-------------------------------|----------------|---------------|----------------------------|-----------------------|
